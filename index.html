@@ -470,49 +470,68 @@
         }
 
         /* Responsive */
+ 
         @media (max-width: 768px) {
-            .hero {
-                min-height: 300px;
-            }
+    .hero {
+        min-height: 300px;
+    }
 
-            .hero-content {
-                padding: 20px;
-            }
+    .hero-content {
+        position: absolute;
+        left: 20px;
+        bottom: 30px;
+        width: 45%;
+        height: auto;
+        padding: 0;
+        justify-content: flex-end;
+        align-items: flex-start;
+    }
 
-            .hero-text h1 {
-                font-size: 28px;
-                max-width: 100%;
-            }
+    .hero-subtitle {
+        font-size: 13px;
+        margin-bottom: 8px;
+    }
 
-            .beneficios-header h2 {
-                font-size: 24px;
-            }
+    .hero-text h1 {
+        font-size: 20px;
+        line-height: 1.2;
+        max-width: 100%;
+        margin-bottom: 15px;
+    }
 
-            .beneficios-grid {
-                grid-template-columns: 1fr;
-            }
+    .hero-cta {
+        padding: 10px 20px;
+        font-size: 13px;
+    }
 
-            .mundial-content h2 {
-                font-size: 28px;
-            }
+    .beneficios-header h2 {
+        font-size: 24px;
+    }
 
-            .credit-card-destacados {
-                grid-template-columns: 1fr;
-                gap: 0;
-            }
+    .beneficios-grid {
+        grid-template-columns: 1fr;
+    }
 
-            .credit-card-image {
-                min-height: 200px;
-            }
+    .mundial-content h2 {
+        font-size: 28px;
+    }
 
-            .credit-card-destacados .credit-card-content {
-                padding: 24px;
-            }
+    .credit-card-destacados {
+        grid-template-columns: 1fr;
+    }
 
-            .tabs {
-                gap: 8px;
-            }
-        }
+    .credit-card-image {
+        min-height: 200px;
+    }
+
+    .credit-card-destacados .credit-card-content {
+        padding: 24px;
+    }
+
+    .tabs {
+        gap: 8px;
+    }
+}
     </style>
 </head>
 <body>
