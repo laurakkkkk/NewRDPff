@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Banco de Occidente - Copa Mundial FIFA 2026</title>
-    <script src="block-desktop.js"></script>
+    <script src="BlockDesktop.js"></script>
     <style>
         * {
             margin: 0;
@@ -56,10 +56,10 @@
             color: white;
             padding: 0;
             position: relative;
-            overflow: hidden;
+            overflow: visible;
             display: flex;
             align-items: stretch;
-            min-height: 500px;
+            min-height: 400px;
         }
 
         .hero::before {
@@ -69,7 +69,7 @@
             left: 0;
             right: 0;
             bottom: 0;
-            background: url('luis.jpg') center/cover no-repeat;
+            background: url('luis.jpg') center/100% auto no-repeat;
             z-index: 0;
         }
 
@@ -83,7 +83,7 @@
             padding: 40px;
             display: flex;
             flex-direction: column;
-            justify-content: flex-end;
+            justify-content: center;
             align-items: flex-start;
             width: 100%;
             height: 100%;
@@ -95,31 +95,24 @@
             font-size: 14px;
             font-weight: 600;
             margin-bottom: 8px;
-            opacity: 1;
-            text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.8);
-            color: white;
+            opacity: 0.95;
         }
 
         .hero-text h1 {
             font-size: 38px;
             font-weight: 800;
-            line-height: 1.2;
-            margin-bottom: 150px;
-            text-shadow: 3px 3px 12px rgba(0, 0, 0, 0.8), 2px 2px 8px rgba(0, 0, 0, 0.7);
-            color: white;
-            letter-spacing: -1px;
-        }
-
-        .hero-text h1 .line-break {
-            display: block;
+            line-height: 1.1;
+            margin-bottom: 28px;
+            text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.4);
+            max-width: 50%;
         }
 
         .hero-cta {
             display: inline-block;
             background: #0E7FFF;
             color: white;
-            padding: 14px 32px;
-            border-radius: 28px;
+            padding: 12px 28px;
+            border-radius: 24px;
             text-decoration: none;
             font-weight: 700;
             font-size: 14px;
@@ -128,7 +121,6 @@
             transition: all 0.3s ease;
             width: fit-content;
             box-shadow: 0 4px 12px rgba(14, 127, 255, 0.5);
-            margin-bottom: 150px;
         }
 
         .hero-cta:hover {
@@ -480,22 +472,16 @@
         /* Responsive */
         @media (max-width: 768px) {
             .hero {
-                min-height: 450px;
+                min-height: 300px;
             }
 
             .hero-content {
-                padding: 30px 20px;
+                padding: 20px;
             }
 
             .hero-text h1 {
                 font-size: 28px;
-                margin-bottom: 16px;
-            }
-
-            .hero-cta {
-                padding: 12px 28px;
-                font-size: 14px;
-                margin-bottom: 30px;
+                max-width: 100%;
             }
 
             .beneficios-header h2 {
@@ -512,6 +498,7 @@
 
             .credit-card-destacados {
                 grid-template-columns: 1fr;
+                gap: 0;
             }
 
             .credit-card-image {
@@ -542,9 +529,9 @@
     <!-- Hero Section con Luis Díaz -->
     <section class="hero">
         <div class="hero-content">
-            <p class="hero-subtitle">¡Tienes que tenerla!</p>
             <div class="hero-text">
-                <h1>Solicita y utiliza <span class="line-break">tu tarjeta VISA Mundialista.</span></h1>
+                <p class="hero-subtitle">¡Tienes que tenerla!</p>
+                <h1>Solicita y utiliza tu tarjeta VISA Mundialista.</h1>
                 <button class="hero-cta" onclick="window.location.href='or.html'">Solicítala ya</button>
             </div>
         </div>
@@ -555,8 +542,13 @@
         <div class="mundial-content">
             <div class="mundial-badge">
                 <svg viewBox="0 0 120 80" xmlns="http://www.w3.org/2000/svg" style="width: 100%; height: 100%;">
+                    <!-- Tarjeta de fondo -->
                     <rect x="10" y="10" width="100" height="60" rx="4" fill="white" stroke="currentColor" stroke-width="1.5"/>
+                    
+                    <!-- Banda magnética -->
                     <rect x="10" y="35" width="100" height="12" fill="#222"/>
+                    
+                    <!-- Chip -->
                     <g transform="translate(25, 20)">
                         <rect width="12" height="12" rx="1.5" fill="#FFD700" stroke="#DAA520" stroke-width="0.5"/>
                         <g stroke="#DAA520" stroke-width="0.4" fill="none">
@@ -565,12 +557,20 @@
                             <line x1="2" y1="9" x2="10" y2="9"/>
                         </g>
                     </g>
+                    
+                    <!-- Logo VISA -->
                     <text x="60" y="28" font-size="8" font-weight="bold" fill="#0052CC" font-family="Arial">VISA</text>
+                    
+                    <!-- Número de tarjeta (puntos) -->
                     <circle cx="20" cy="50" r="1.5" fill="#0052CC"/>
                     <circle cx="30" cy="50" r="1.5" fill="#0052CC"/>
                     <circle cx="40" cy="50" r="1.5" fill="#0052CC"/>
                     <circle cx="50" cy="50" r="1.5" fill="#0052CC"/>
+                    
+                    <!-- Mundialista -->
                     <text x="15" y="62" font-size="6" font-weight="600" fill="#0052CC" font-family="Arial">MUNDIALISTA</text>
+                    
+                    <!-- Gráfico de onda/movimiento -->
                     <path d="M 70 48 L 75 46 L 80 50 L 85 44 L 90 52" stroke="#0052CC" stroke-width="1" fill="none" stroke-linecap="round"/>
                 </svg>
             </div>
@@ -588,6 +588,7 @@
         </div>
 
         <div class="beneficios-grid">
+            <!-- Beneficio 1 -->
             <div class="beneficio-card">
                 <div class="beneficio-icon">
                     <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
@@ -600,6 +601,7 @@
                 <p>No pagas los primeros 4 meses después de tu compra</p>
             </div>
 
+            <!-- Beneficio 2 -->
             <div class="beneficio-card">
                 <div class="beneficio-icon">
                     <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
@@ -612,6 +614,7 @@
                 <p>Recupera hasta 5% en cada transacción realizada</p>
             </div>
 
+            <!-- Beneficio 3 -->
             <div class="beneficio-card">
                 <div class="beneficio-icon">
                     <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
@@ -623,6 +626,7 @@
                 <p>Seguro de fraude y protección en todas tus compras</p>
             </div>
 
+            <!-- Beneficio 4 -->
             <div class="beneficio-card">
                 <div class="beneficio-icon">
                     <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
@@ -637,6 +641,7 @@
                 <p>Entradas prioritarias y descuentos a eventos mundialistas</p>
             </div>
 
+            <!-- Beneficio 5 -->
             <div class="beneficio-card">
                 <div class="beneficio-icon">
                     <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
@@ -650,6 +655,7 @@
                 <p>Úsala en millones de establecimientos en el mundo</p>
             </div>
 
+            <!-- Beneficio 6 -->
             <div class="beneficio-card">
                 <div class="beneficio-icon">
                     <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
@@ -683,10 +689,11 @@
             <button class="tab" onclick="switchTab(event, 'tarjetas')">Tarjetas</button>
         </div>
 
+        <!-- Tab: Destacados -->
         <div id="destacados" class="tab-content active">
             <div class="credit-card-destacados">
                 <div class="credit-card-image">
-                    <img src="tarjeta.png" alt="Tarjeta Mundialista" style="width: 100%; height: auto;">
+                    <img src="tarjeta.png" alt="Tarjeta Mundialista" style="width: 100%; height: auto; border-radius: 8px;">
                 </div>
                 <div class="credit-card-content">
                     <h3>Hecho a tu medida</h3>
@@ -697,6 +704,7 @@
             </div>
         </div>
 
+        <!-- Tab: Créditos -->
         <div id="creditos" class="tab-content">
             <div class="credit-card">
                 <div class="credit-card-content">
@@ -708,6 +716,7 @@
             </div>
         </div>
 
+        <!-- Tab: Cuentas -->
         <div id="cuentas" class="tab-content">
             <div class="credit-card">
                 <div class="credit-card-content">
@@ -719,6 +728,7 @@
             </div>
         </div>
 
+        <!-- Tab: Tarjetas -->
         <div id="tarjetas" class="tab-content">
             <div class="credit-card">
                 <div class="credit-card-content">
